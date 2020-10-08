@@ -9,6 +9,8 @@ import org.springframework.stereotype.Component;
 //default bean id is the name of class exept the firt letter is lower case 
 public class TenisCoach implements Coach {
 	
+	//Field injection 
+	@Autowired
 	private FortuneService fortuneService;
 	
 	public TenisCoach() {
@@ -16,12 +18,12 @@ public class TenisCoach implements Coach {
 	}
 	
 	//define a setter methods 
-	@Autowired
+	/*@Autowired
 	public void doSumCrazyStuff(FortuneService fortuneService) {
 		System.out.println(">>Tenis Coach : inside doSumCrazyStuff() method");		
 		this.fortuneService = fortuneService;
 	}
-	
+	*/
 	/*
 	//@Autowired
 	public TenisCoach(FortuneService fortuneService) {
