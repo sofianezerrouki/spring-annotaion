@@ -1,6 +1,7 @@
 package com.camacod.springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 //@Component("thatSillyCoach") //like a bean in the xml configuration
@@ -11,6 +12,8 @@ public class TenisCoach implements Coach {
 	
 	//Field injection 
 	@Autowired
+	//that means use this fortune service !!
+	@Qualifier("randomFortuneService")
 	private FortuneService fortuneService;
 	
 	public TenisCoach() {
